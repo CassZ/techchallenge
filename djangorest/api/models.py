@@ -29,12 +29,12 @@ class Address(models.Model):
         _("Postal Code"), max_length=64, blank=True)
 
     def __str__(self):
-        return self.line1
+        return self.line1 + " " + self.postal_code
 
 
 class ZillowInformation(models.Model):
     zillow_id = models.CharField(
-       _("First Line of Address"),
+       _("Zillow ID"),
        max_length=20, primary_key=True)
     link = models.CharField(
         _("Link"), max_length=2000, blank=True)
@@ -42,12 +42,12 @@ class ZillowInformation(models.Model):
     rent_est = models.PositiveIntegerField(
         _("Zestimate Rent"), null=True, blank=True)
     rent_est_last_updated = models.DateField(
-        _("Zestimate Rent Last Updated"), blank=True)
+        _("Zestimate Rent Last Updated"), null=True, blank=True)
 
     price_est = models.PositiveIntegerField(
         _("Zestimate Price"), null=True, blank=True)
     price_est_last_updated = models.DateField(
-        _("Zestimate Price Last Updated"), blank=True)
+        _("Zestimate Price Last Updated"), null=True, blank=True)
 
     def __str__(self):
         return self.zillow_id
@@ -66,8 +66,8 @@ class Property(models.Model):
     home_type = models.CharField(
         _("Home Type"), max_length=40,
         blank=True, null=True)
-    price = models.PositiveIntegerField(
-        _("Price"), blank=True)
+    price = models.CharField(
+        _("Price"), max_length=40, blank=True)
     price_last_sold = models.PositiveIntegerField(
         _("Price Last Sold"), null=True, blank=True)
     date_last_sold = models.DateField(
