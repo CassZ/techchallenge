@@ -17,7 +17,7 @@
 - State field in the CSV file contains only 'CA'.
 - A property might have extra information from different websites.
 
-## PossibleImprovements
+## Possible Improvements
 
 - Add more unit tests to test the models, views and commands thoroughly.
 - Proper command to pre-populate state data.

@@ -1,4 +1,5 @@
 from django.conf.urls import url, include
+from rest_framework.documentation import include_docs_urls
 from rest_framework.urlpatterns import format_suffix_patterns
 from .views import (
     StateDetailsView, StateCreateListView,
@@ -31,6 +32,7 @@ urlpatterns = {
     url(r'^properties/$',
         PropertyCreateListView.as_view(),
         name="property-create-list"),
+    url(r'^docs/', include_docs_urls(title='Technical Challenge'))
 }
 
 urlpatterns = format_suffix_patterns(urlpatterns)
