@@ -1,4 +1,4 @@
-# techchallenge
+# Technical Challenge
 
 ## Installation
 
