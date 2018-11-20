@@ -13,7 +13,6 @@ class StateDetailsView(generics.RetrieveUpdateDestroyAPIView):
     """
     This class provides a Detail View of a State object.
     """
-
     queryset = State.objects.all()
     serializer_class = StateListSerializer
 
@@ -34,7 +33,6 @@ class AddressDetailsView(generics.RetrieveUpdateDestroyAPIView):
     """
     This class provides a Detail View of an Address object.
     """
-
     queryset = Address.objects.all()
     serializer_class = AddressListSerializer
 
@@ -54,16 +52,17 @@ class AddressCreateListView(generics.ListCreateAPIView):
 
 class ZillowInformationDetailsView(generics.RetrieveUpdateDestroyAPIView):
     """
-    This class provides a Detail View of an Address object.
+    This class provides a Detail View of an 
+    ZillowInformation object.
     """
-
     queryset = ZillowInformation.objects.all()
     serializer_class = ZillowInformationListSerializer
 
 
 class ZillowInformationCreateListView(generics.ListCreateAPIView):
     """
-    This class allows creation and query of Address objects.
+    This class allows creation and query of 
+    ZillowInformation objects.
     """
     queryset = ZillowInformation.objects.all()
     serializer_class = ZillowInformationListSerializer
@@ -78,21 +77,20 @@ class ZillowInformationCreateListView(generics.ListCreateAPIView):
 
 class PropertyDetailsView(generics.RetrieveUpdateDestroyAPIView):
     """
-    This class provides a Detail View of an Address object.
+    This class provides a Detail View of an Property object.
     """
-
     queryset = Property.objects.all()
     serializer_class = PropertyListSerializer
 
 
 class PropertyCreateListView(generics.ListCreateAPIView):
     """
-    This class allows creation and query of Address objects.
+    This class allows creation and query of Property objects.
     """
     queryset = Property.objects.all()
     serializer_class = PropertyListSerializer
     filter_fields = (
-    'area_unit', 'bathrooms', 'bedrooms',
+        'area_unit', 'bathrooms', 'bedrooms',
         'home_size', 'home_type', 'price',
         'area_unit', 'bathrooms', 'bedrooms',
         'price_last_sold', 'date_last_sold',

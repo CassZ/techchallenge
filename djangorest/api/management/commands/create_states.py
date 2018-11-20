@@ -11,8 +11,8 @@ class Command(BaseCommand):
     """
 
     def handle(self, *args, **options):
-        # Use California as an example for challenge csv
-        # data only. Cases of the rest of states are ommitted.
+        # Use California as an example for challenge csv data only.
+        # Creation of objects of the rest of states is ommitted.
         new_state, created = State.objects.get_or_create(
             abbreviation='CA',
             name='California')

@@ -9,6 +9,11 @@ from api.models import (
 
 
 class Command(BaseCommand):
+    """ 
+    A command that ingest csv data and build State,
+    Address, ZillowInformation and Property objects out of
+    the data.
+    """
 
     def handle(self, *args, **options):
         path = os.path.join(

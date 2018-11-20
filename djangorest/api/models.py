@@ -33,6 +33,10 @@ class Address(models.Model):
 
 
 class ZillowInformation(models.Model):
+    """
+    A model that contains Zillow specific information
+    of a property.
+    """
     zillow_id = models.CharField(
        _("Zillow ID"),
        max_length=20, primary_key=True)
