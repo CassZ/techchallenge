@@ -9,6 +9,12 @@
 
 - Run manage.py create_states to create US states.
 - Run manage.py ingest_property_csv to handle data in challenge_data.csv file.
+- View Property objects at /properties/
+- View ZillowInformation objects at /zillowinformation/
+- View Address objects at /addresses/
+- View State objects at /states/
+- View Documentation at /docs/
+
 
 ## Assumptions
 
