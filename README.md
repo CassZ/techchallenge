@@ -26,4 +26,5 @@
 ## Possible Improvements
 
 - Add more unit tests to test the models, views and commands thoroughly.
-- Proper command to pre-populate state data.
+- Add proper command to pre-populate state data.
+- Add more information to the API Documentation.
