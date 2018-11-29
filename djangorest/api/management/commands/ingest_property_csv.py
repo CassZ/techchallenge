@@ -20,7 +20,7 @@ class Command(BaseCommand):
 
     def add_arguments(self, parser):
         # Sample path is 'csv/challenge_data.csv'
-        parser.add_argument('path', type=str)
+        parser.add_argument('path', type=str, help="The path of the data file")
 
     def handle(self, *args, **kwargs):
         file_path = kwargs['path']
