@@ -1,6 +1,5 @@
 from django.db import models
 from django.utils.translation import ugettext as _
-from decimal import Decimal
 
 
 class State(models.Model):
@@ -38,8 +37,7 @@ class ZillowInformation(models.Model):
     of a property.
     """
     zillow_id = models.CharField(
-       _("Zillow ID"),
-       max_length=20, primary_key=True)
+        _("Zillow ID"), max_length=20, primary_key=True)
     link = models.CharField(
         _("Link"), max_length=2000, blank=True)
 
@@ -92,4 +90,3 @@ class Property(models.Model):
         'ZillowInformation',
         null=True, blank=True,
         on_delete=models.CASCADE)
-

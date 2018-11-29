@@ -1,12 +1,13 @@
-from django.shortcuts import render
+from api.models import (
+    Address, Property,
+    State, ZillowInformation)
 from rest_framework import generics
+
 from .serializers import (
-    StateListSerializer, AddressListSerializer,
-    ZillowInformationListSerializer, PropertyListSerializer)
-from .models import (
-    State, Address,
-    ZillowInformation, Property)
-import django_filters.rest_framework
+    AddressListSerializer,
+    PropertyListSerializer,
+    StateListSerializer,
+    ZillowInformationListSerializer,)
 
 
 class StateDetailsView(generics.RetrieveUpdateDestroyAPIView):
@@ -52,7 +53,7 @@ class AddressCreateListView(generics.ListCreateAPIView):
 
 class ZillowInformationDetailsView(generics.RetrieveUpdateDestroyAPIView):
     """
-    This class provides a Detail View of an 
+    This class provides a Detail View of an
     ZillowInformation object.
     """
     queryset = ZillowInformation.objects.all()
@@ -61,7 +62,7 @@ class ZillowInformationDetailsView(generics.RetrieveUpdateDestroyAPIView):
 
 class ZillowInformationCreateListView(generics.ListCreateAPIView):
     """
-    This class allows creation and query of 
+    This class allows creation and query of
     ZillowInformation objects.
     """
     queryset = ZillowInformation.objects.all()

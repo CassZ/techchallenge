@@ -1,11 +1,14 @@
-from django.conf.urls import url, include
+from django.conf.urls import url
+
 from rest_framework.documentation import include_docs_urls
 from rest_framework.urlpatterns import format_suffix_patterns
+
 from .views import (
-    StateDetailsView, StateCreateListView,
-    AddressDetailsView, AddressCreateListView,
-    ZillowInformationDetailsView, ZillowInformationCreateListView,
-    PropertyDetailsView, PropertyCreateListView)
+    AddressCreateListView, AddressDetailsView,
+    PropertyCreateListView, PropertyDetailsView,
+    StateCreateListView, StateDetailsView,
+    ZillowInformationCreateListView, ZillowInformationDetailsView,)
+
 
 urlpatterns = {
     url(r'^states/(?P<pk>[0-9]+)/$',

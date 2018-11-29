@@ -1,7 +1,9 @@
+from api.models import (
+    Address, Property,
+    State, ZillowInformation)
+
 from rest_framework import serializers
-from .models import (
-    State, Address,
-    ZillowInformation, Property)
+
 
 class StateListSerializer(serializers.ModelSerializer):
 

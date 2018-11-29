@@ -1,8 +1,9 @@
-from django.test import TestCase
+from api.models import Property
+
 from django.core.management import call_command
-from api.models import (
-    State, Address,
-    ZillowInformation, Property)
+
+from django.test import TestCase
+
 
 class IngestPropertyCSVTestCase(TestCase):
     def test_command(self):

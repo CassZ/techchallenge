@@ -1,8 +1,6 @@
-import os
-import csv
-from django.core.management.base import BaseCommand, CommandError
-from djangorest.settings import STATIC_ROOT
 from api.models import State
+
+from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):
