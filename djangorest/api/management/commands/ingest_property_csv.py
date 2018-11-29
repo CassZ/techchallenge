@@ -8,7 +8,7 @@ from api.models import (
 
 from django.core.management.base import BaseCommand
 
-from djangorest.settings import MEDIA_ROOT
+from djangorest.settings import DATA_ROOT
 
 
 class Command(BaseCommand):
@@ -18,9 +18,14 @@ class Command(BaseCommand):
     the data.
     """
 
-    def handle(self, *args, **options):
+    def add_arguments(self, parser):
+        # Sample path is 'csv/challenge_data.csv'
+        parser.add_argument('path', type=str)
+
+    def handle(self, *args, **kwargs):
+        file_path = kwargs['path']
         path = os.path.join(
-            MEDIA_ROOT, 'data/challenge_data.csv')
+            DATA_ROOT, file_path)
         with open(path) as file:
             reader = csv.reader(file)
             next(reader, None)

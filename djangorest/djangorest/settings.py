@@ -124,9 +124,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = 'static/'
 
-# Media files.
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# Data files.
+DATA_URL = '/data/'
+DATA_ROOT = os.path.join(BASE_DIR, 'data')
 
 # Set Django Filter Backend Globally.
 REST_FRAMEWORK = {
